@@ -1,0 +1,118 @@
+body{
+    background-color:whitesmoke;
+}
+.left{
+    position: relative;
+    left: 300px;
+    top:20px;
+    width: 50%;
+}
+.right{
+    position:relative;
+    left:800px;
+    width: 50%;
+    
+}
+.firstblock{
+    position: relative;
+    border:1px solid rgba(0, 0, 0, 0.13);
+    background-color: white;
+    margin-top:80px;
+    margin-right: 530px;
+    margin-left:15px;
+    height: 450px;
+}
+.secondblock{
+    position: relative  ;
+    border:1px solid rgba(0,0,0, 0.13);
+    height: 50px;
+    margin-top:10px;
+    margin-left:15px;
+    width: 214px;
+    background-color: white;
+}
+.thirdblock{
+    position: relative;
+    border:0px solid rgba(0, 0, 0, 0.027);
+    height:20px;
+    width:260px;
+    background-color:whitesmoke;
+    text-align: center;
+    margin-top:-10px;
+}
+.header{
+    margin-top:10px;
+    margin-left:45px;
+}
+.reg{
+    border:0px solid black;
+    width:180px;
+    margin-top:-12px;
+    margin-left:20px;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.452);
+    font-weight: bold;
+}
+.buttons{
+    margin-left:20px;
+    color:white;
+    margin-top:10px;
+}
+.btn{
+    border:0 solid black;
+    border-radius: 3px;
+    width: 180px;
+    height: 25px;
+    background-color: rgb(53, 154, 248);
+    color:white;
+    font-size:10px;
+    font-weight:bold;
+    
+}
+.ili{
+    color:rgba(0, 0, 0, 0.33);
+    margin-left:90px;
+    margin-top:-10px;
+}
+.polya{
+    position: relative;
+    margin-left:20px;
+    margin-top:-10px;
+}
+.place{
+    border:1px solid rgba(0, 0, 0, 0.13);
+    width:180px;
+    height: 25px;
+    border-radius: 3px;
+    margin-top:5px;
+    background-color:rgba(0, 0, 0, 0.027);
+    font-size: 9px;
+    padding-left:3px;
+}
+.lastwords{
+    border:0 solid black;
+    width: 170px;
+    text-align: center;
+    margin-left:23px;
+    margin-top:-5px;
+    color:rgba(0, 0, 0, 0.452);
+}
+.last{
+    text-align: center;
+    margin-top:17px;
+    color:rgba(0, 0, 0, 0.637);
+}
+.install{
+    font-weight: normal;
+}
+.kartinka{
+    margin-top:-10px;
+    width:80px;
+    height:30px;
+   
+}
+#1{
+    background-image: url(fb.png);
+}
+
+

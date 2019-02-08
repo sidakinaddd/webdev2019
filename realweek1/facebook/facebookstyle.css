@@ -1,0 +1,183 @@
+body{
+    margin:0;
+    padding: 0;
+    background: linear-gradient(white,#D3D8e8);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    background-color: rgb(59,89,152);
+    height:12.2%;
+    width: 100%;
+    border:1px;
+}
+.left{
+    width: 55%;
+    position: absolute;
+    left: 0;
+}
+.right{
+    width: 45%;
+    position: absolute;
+    top:16%;
+    left:56%;
+    }
+    .image{
+    position: relative;
+    left:200px;
+}
+.registration{
+    background-color: white;
+    border: 1px solid rgb(90, 131, 185);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:400px;
+    padding:10px;
+    padding-left:8px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width:373px;
+}
+select{
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(190,200,215);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    height: 30px;
+    padding:3px;
+    width:60px;
+}
+#birthdayquestion{
+    color:rgb(54,88,153);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 150px;
+    text-decoration: none;
+    display:inline-block;
+}
+.gender{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:18px;
+    font-weight: 400px;
+}
+    #submit{
+    width: 190px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: linear-gradient(#67ae55, #578843);
+    color: white;
+    font-size: 23px;
+    padding:3px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: float;
+    font-weight: bold !important;
+    box-shadow: inset 0 1px 1px #a4e388;
+    text-align: center;
+}
+#facebookheader{
+    font-size: 40px;
+    position: absolute;
+    color: white ;
+    left: 220px ;
+    top: 30px;
+    font-family: inherit;
+}
+.emailorpassword{  
+    font-size: 14px;
+    position: absolute;
+    color: white;
+}
+#email{
+    position: absolute;
+    right:570px;
+    top:15px
+}
+#password{
+    position: absolute;
+    right: 420px;
+    top:15px
+}
+.labels{
+    width: 165px;
+    height: 23px;
+    border: 1px solid black;
+    background: blanchedalmond;
+}
+#firstlabel{
+    position:absolute;
+    right:500px;
+    top:40px
+}
+#secondlabel{
+    position: absolute;
+    right: 323px;
+    top:40px
+}
+#btn{
+    background-color:rgb(74, 107, 172);
+    height:23px;
+    color:white;
+    border:1px solid darkblue;
+    border-radius: 2px;
+    position:absolute;
+    top:40px;
+    right: 250px
+}
+#forgotten{
+    color:rgb(100, 134, 202);
+    font-family: inherit;
+    font-size: 12px;
+    position: absolute;
+    top:65px;
+    right:400px;
+    text-decoration: none;
+}
+#prgrph{
+    color:rgb(14,56,95);
+    font-size:20px;
+    width:500px;
+    left:200px;
+    font-weight: 700;
+    position: relative;
+    word-spacing: -1;
+    margin:2%;
+}
+.rightlabel{
+    color:rgb(14,56,95);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sign{
+    position:absolute;
+    top:-20px;
+    font-size: 35px
+}
+#itsfree{
+    position: absolute;
+    font-size: 19px;
+}
+#birth{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(14,56,95);
+}
+#agree{
+    font-size: 12px;
+    color: rgb(100, 101, 104)
+}
+#create{
+    font-size: 14px;
+    color: rgba(14, 12, 12, 0.733);
+}
+.footer{
+    position: absolute;
+    top:90%;
+    height:80px;
+    width: 100%;
+    background-color:white;
+    text-align: center;
+    text-decoration: none;
+    padding:20px 0 0 0;
+}
