@@ -22,10 +22,11 @@ function newTask(){
     li.onclick=functionsOnItem;
     }
 function functionsOnItem(e){
-    if(e.target.tagName==="INPUT" && e.target.className==="close"){
+    if(e.target.className==="close"){
     var div=e.target.parentNode;
     div.remove();
-    }else if(e.target.tagName==="INPUT" && e.target.className==="cheks"){
-        e.target.classList.toggle('checked');
+    }
+    if(e.target.className==="cheks"){
+        e.target.parentNode.classList.toggle('checked');
     }
 }

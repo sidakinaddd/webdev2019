@@ -1,3 +1,7 @@
+body{
+    margin:0;
+    padding:0;
+}
 ul li.checked{
     background:#ffffff;
     color:black;
@@ -8,11 +12,18 @@ ul li.checked{
     right:30%;
     cursor: pointer;
     border:1px solid black;
+    width:30px;
+    height: 30px;
+    margin-top:5px;
     background-color:red;
     border-radius: 3px;
 }
 ul li{
     cursor: pointer;
+    list-style-type: none;
+    border:1px solid gainsboro;
+    width:70%;
+    height: 40px;
 }
 
 /*ul li.checked::before{
@@ -25,7 +36,7 @@ ul li{
     width:5px;
 }*/
 .header{
-    position:absolute;
+    position: absolute;
     border:0 solid black;
     background-color:black;
     height: 10%;
@@ -49,6 +60,7 @@ ul li{
     position: absolute;
     left:25%;
     top:15%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #input{
     position: absolute;
