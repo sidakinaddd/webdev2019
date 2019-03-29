@@ -136,3 +136,57 @@ print any(c.isupper() for c in s)
 """task 15"""
 
 
+""" task 16"""
+if __name__ == '__main__':
+    N = int(raw_input())
+    my_list=[]
+
+    for i in range(0,N):
+        cmd=raw_input().split()
+        if cmd[0]=="insert":
+            my_list.insert(int(cmd[1]),int(cmd[2]))
+        elif cmd[0]=="append":
+            my_list.append(int(cmd[1]))
+        elif cmd[0]=="pop":
+            my_list.pop()
+        elif cmd[0]=="remove":
+            my_list.remove(int(cmd[1]))
+        elif cmd[0]=="sort":
+            my_list.sort()
+        elif cmd[0]=="print":
+            print my_list
+        elif cmd[0]=="reverse":
+            my_list.reverse()
+
+"""task 17"""
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    integer_list = tuple(map(int, raw_input().split()))
+    print hash(integer_list)
+
+"""task 18"""
+import string
+def swap_case(s):
+    lower=string.ascii_lowercase;
+    upper=string.ascii_uppercase;
+    new_string=[];
+    for i in range(len(s)):
+        if s[i] in lower:
+            new_string.append(s[i].upper())
+        elif s[i] in upper:
+            new_string.append(s[i].lower())
+        else :
+            new_string.append(s[i])
+    
+    return ('').join(new_string)
+
+if __name__ == '__main__':
+    s = raw_input()
+    result = swap_case(s)
+    print result
+
+"""task 19"""
+
+
+
