@@ -21,7 +21,7 @@ ul li.checked{
 ul li{
     cursor: pointer;
     list-style-type: none;
-    border:1px solid gainsboro;
+    border:2px solid rgba(100, 97, 100, 0.877);
     width:70%;
     height: 40px;
 }
