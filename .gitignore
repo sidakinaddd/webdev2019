@@ -1,1 +1,5 @@
-fgdf
+bin/                
+include/            
+lib/                
+.idea/
+pip-selfcheck.json
