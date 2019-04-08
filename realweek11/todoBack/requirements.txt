@@ -1,0 +1,5 @@
+django==2.2
+jinja2==2.10.1
+markupsafe==1.1.1
+pytz==2018.9
+sqlparse==0.3.0
