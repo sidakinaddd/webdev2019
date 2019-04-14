@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { ApiService } from './api.service';
+import { ApikekService } from './apikek.service';
 import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ApiService]
+  providers: [ApikekService]
 })
 export class AppComponent {
   tasklists = [{title:'t1'}]
   selectedTaskList;
-  constructor(private api:ApiService){
+  tasks=[{name:"task",status:"status"}];
+  constructor(private api:ApikekService){
     this.getTaskLists();
     this.selectedTaskList={id:'',name:''}
   }
@@ -25,14 +26,22 @@ export class AppComponent {
       }
     )
   }
-
+  
   tasklistClicked = (tasklist)=>{
     this.api.getOneTaskList(tasklist.id).subscribe(
       data=>{
-        this.selectedTaskList=data;
-      
+         this.selectedTaskList=data;
       },
       error => {
+        console.log(error)
+      }
+    )
+    this.api.getTasks(tasklist).subscribe(
+      data=>{ 
+        this.tasks=data;
+       
+      },
+      error=>{
         console.log(error)
       }
     )
@@ -64,8 +73,7 @@ export class AppComponent {
   deleteTaskList= ()=>{
     this.api.deleteTaskList(this.selectedTaskList.id).subscribe(
       data=>{
-        this.getTaskLists();
-      
+        this.getTaskLists();   
       },
       error => {
         console.log(error)

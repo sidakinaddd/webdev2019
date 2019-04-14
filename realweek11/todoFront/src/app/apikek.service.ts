@@ -5,12 +5,15 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ApikekService {
 
   baseurl="http://127.0.0.1:8000/apikek";
   httpHeader= new HttpHeaders({'Content-Type':'application/json'})
   constructor(private http: HttpClient) { }
 
+  getTasks(tasklist):Observable<any>{
+    return this.http.get(this.baseurl+'/task_lists/'+tasklist.id+'/tasks/',{headers:this.httpHeader})
+  }
   getAllTaskLists(): Observable<any>{
     return this.http.get(this.baseurl+'/task_lists/',
     {headers:this.httpHeader})
