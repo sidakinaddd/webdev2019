@@ -13,13 +13,13 @@ class TaskList(models.Model):
 
 class Task(models.Model):
     name = models.CharField(max_length=200)
-    created_at = models.DateTimeField(auto_now_add=True)
-    due_on = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField()
+    due_on = models.DateTimeField()
     status = models.CharField(max_length=200)
     task_list = models.ForeignKey(TaskList, on_delete=models.CASCADE)
 
     def __str__(self):
-        return '{}: {}'.format(self.id, self.name)
+        return '{}: {}, {}, {}'.format(self.id, self.name,self.created_at,self.due_on)
 
     def to_json(self):
         return {
