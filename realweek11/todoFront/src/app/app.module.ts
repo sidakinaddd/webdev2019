@@ -4,11 +4,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ApikekService } from './apikek.service';
+import { MainComponent } from './main/main.component';
+import { ProvidersFeature } from '@angular/core/src/render3';
+import { ProviderService } from './main/services/provider.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent
+ 
   ],
   imports: [
     BrowserModule,
@@ -16,7 +20,7 @@ import { ApikekService } from './apikek.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApikekService],
+  providers: [ProviderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

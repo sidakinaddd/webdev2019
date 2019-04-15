@@ -1,12 +1,13 @@
+    
 import { TestBed } from '@angular/core/testing';
 
-import { ApikekService } from './apikek.service';
+import { ProviderService } from './provider.service';
 
-describe('ApikekService', () => {
+describe('ProviderService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ApikekService = TestBed.get(ApikekService);
+    const service: ProviderService = TestBed.get(ProviderService);
     expect(service).toBeTruthy();
   });
 });
