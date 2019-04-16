@@ -19,7 +19,7 @@ export class ProviderService extends MainService{
    }
    
    getTasks(tasklist: ITaskList): Promise<ITask[]>{
-     return  this.get(`http://localhost:8000/apikek/task_lists/${tasklist.id}/tasks`,{});
+     return  this.get(`http://localhost:8000/apikek/task_lists/${tasklist.id}/tasks/`,{});
    }
 
    updateTaskList(tasklist: ITaskList): Promise<ITaskList>{

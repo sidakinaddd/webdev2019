@@ -12,7 +12,6 @@ export class MainComponent implements OnInit {
 
   public tasklist: ITaskList[]=[];
   public loading = false;
-  public selected;
   
   public tasks: ITask[]=[]; 
 
@@ -30,9 +29,9 @@ export class MainComponent implements OnInit {
     });
   }
 
-  getTasks(selected: ITaskList){
+  getTasks(task: ITaskList){
     //this.selected=selected;
-    this.provider.getTasks(selected).then(res =>{
+    this.provider.getTasks(task).then(res =>{
       this.tasks = res;
     });
 
