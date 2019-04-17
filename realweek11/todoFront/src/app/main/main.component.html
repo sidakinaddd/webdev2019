@@ -31,7 +31,11 @@ Loading...
 Tasks:
 
 <div>
-  <div *ngFor="let p of tasks"> 
-    <h2>{{p.name}}</h2>
+  <div *ngFor = "let p of tasks"> 
+    <div><span>ID:</span> {{p.id}}</div>
+    <div><span>NAME:</span> {{p.name}}</div>
+    <div><span>STATUS:</span> {{p.status}}</div>
+    <div><span>CREATED ON:</span> {{p.created_at}}</div>
+    <div><span>DUE ON:</span> {{p.due_on}}</div>
   </div>
 </div>

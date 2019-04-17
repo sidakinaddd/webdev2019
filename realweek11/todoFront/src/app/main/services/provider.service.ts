@@ -11,32 +11,32 @@ import { promise } from 'protractor';
 export class ProviderService extends MainService{
   constructor(http: HttpClient) {
     super(http); 
-   } 
+  } 
 
 
-   getTaskList(): Promise<ITaskList[]>{
-     return this.get('http://localhost:8000/apikek/task_lists/',{});
-   }
+    getTaskList(): Promise<ITaskList[]>{
+      return this.get('http://localhost:8000/apikek/task_lists/',{});
+    }
    
-   getTasks(tasklist: ITaskList): Promise<ITask[]>{
-     return  this.get(`http://localhost:8000/apikek/task_lists/${tasklist.id}/tasks/`,{});
-   }
+    getTasks(id:number){
+      return  this.get(`http://localhost:8000/apikek/task_lists/${id}/tasks/`,{});
+    }
 
-   updateTaskList(tasklist: ITaskList): Promise<ITaskList>{
-     return this.put(`http://localhost:8000/apikek/task_lists/${tasklist.id}/`,{
-       name: tasklist.name
-     });
-   }
+    updateTaskList(tasklist: ITaskList): Promise<ITaskList>{
+      return this.put(`http://localhost:8000/apikek/task_lists/${tasklist.id}/`,{
+        name: tasklist.name
+      });
+    }
 
-   deleteTaskList(id: number) : Promise<any>{
-      return this.delet(`http://localhost:8000/apikek/task_lists/${id}/`,{});
-   }
+    deleteTaskList(id: number) : Promise<any>{
+        return this.delet(`http://localhost:8000/apikek/task_lists/${id}/`,{});
+    }
 
-   createTaskList(name: any) : Promise<ITaskList>{
-     return this.post(`http://localhost:8000/apikek/task_lists/`, {
-       name: name
-     });
-   }
+    createTaskList(name: any) : Promise<ITaskList>{
+      return this.post(`http://localhost:8000/apikek/task_lists/`, {
+         name: name
+      });
+    }
 
 
 

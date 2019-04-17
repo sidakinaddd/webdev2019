@@ -29,9 +29,9 @@ export class MainComponent implements OnInit {
     });
   }
 
-  getTasks(task: ITaskList){
+  getTasks(task:ITaskList){
     //this.selected=selected;
-    this.provider.getTasks(task).then(res =>{
+    this.provider.getTasks(task.id).then(res =>{
       this.tasks = res;
     });
 
