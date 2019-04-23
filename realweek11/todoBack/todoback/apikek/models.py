@@ -1,9 +1,15 @@
 from django.db import models
 import datetime
+from django.contrib.auth.models import User
 
 
 class TaskList(models.Model):
+    created_by=models.ForeignKey(User,on_delete=models.CASCADE,default=None, null=True)
     name = models.CharField(max_length=200)
+    created_by=models.ForeignKey(User,on_delete=models.CASCADE,default=2)
+    class Meta:
+        verbose_name="Task_list"
+        verbose_name_plural="Task Lists"
 
     def to_json(self):
         return {

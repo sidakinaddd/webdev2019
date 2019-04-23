@@ -1,6 +1,11 @@
-from django.contrib import admin
+from django.contrib.auth.admin import admin
+
 from .models import Task, TaskList
 
 
 admin.site.register(Task)
-admin.site.register(TaskList)
+# admin.site.register(TaskList)
+
+@admin.register((TaskList))
+class TaskListAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'created_by')
