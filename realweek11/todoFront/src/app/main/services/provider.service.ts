@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MainService } from './main.service';
 import { HttpClient } from '@angular/common/http';
-import { ITaskList } from '../models/todo';
+import { ITaskList, IAuthResponse } from '../models/todo';
 import { ITask } from '../models/todo';
 import { promise } from 'protractor';
 
@@ -37,8 +37,15 @@ export class ProviderService extends MainService{
          name: name
       });
     }
+    auth(login: any, password: any): Promise<IAuthResponse> {
+      return this.post(`http://localhost:8000/apikek/login/`, {
+        username: login,
+        password: password
+      });
+    }
 
-
-
-
+    logout(): Promise<any> {
+      return this.post(`http://localhost:8000/apikek/logout/`, {
+      });
+    }
   }
