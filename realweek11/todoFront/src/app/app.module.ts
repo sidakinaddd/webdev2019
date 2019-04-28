@@ -9,6 +9,7 @@ import { ProvidersFeature } from '@angular/core/src/render3';
 import { ProviderService } from './main/services/provider.service';
 import { AuthInterceptor } from './AuthInterceptor';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +23,11 @@ import { AuthInterceptor } from './AuthInterceptor';
     FormsModule
   ],
   providers: [ProviderService,
-              <ClassProvider> {
-                provide: HTTP_INTERCEPTORS,
-                useClass: AuthInterceptor,
-                multi: true
-              }
+    <ClassProvider> {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -16,7 +16,8 @@ export class MainComponent implements OnInit {
   public tasks: ITask[]=[]; 
 
   public name: any='';
-  public logged = false;
+ public logged = false;
+  
 
   public login:any='';
   public password:any='';
@@ -37,7 +38,6 @@ export class MainComponent implements OnInit {
         }, 2000);
       });
     }
-    
   }
 
   getTasks(task:ITaskList){
@@ -71,7 +71,6 @@ export class MainComponent implements OnInit {
       })
     }
   }
-
   auth() {
     console.log(this.login+" "+this.password);
     if (this.login !== '' && this.password !== '') {
@@ -97,6 +96,5 @@ export class MainComponent implements OnInit {
       this.logged = false;
     });
   }
-  
 
 }
