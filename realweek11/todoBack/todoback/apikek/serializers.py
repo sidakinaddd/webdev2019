@@ -30,11 +30,10 @@ class UserSerializer2(serializers.ModelSerializer):
 class TaskListSerializer2(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(required=True)
-    created_by = UserSerializer(read_only=True)
 
     class Meta:
         model = TaskList
-        fields = ('id', 'name', 'created_by')
+        fields = ('id', 'name',)
 
 
 class TasksSerializer(serializers.Serializer):
@@ -53,6 +52,8 @@ class TasksSerializer(serializers.Serializer):
         instance.name = validated_data.get('name', instance.name)
         instance.save()
         return instance
+
+
 
 
 

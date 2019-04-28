@@ -79,6 +79,10 @@ def task_list_tasks_detail(request, pk, ik):
 
      elif request.method == 'DELETE':
          tasks = task_list.task_set.all();
+         try:
+             task_list = TaskList.objects.get(id=pk)
+         except TaskList.DoesNotExist as e:
+             return JsonResponse({'error': str(e)})
          for t in tasks:
              if t.id == ik:
                 t.delete()

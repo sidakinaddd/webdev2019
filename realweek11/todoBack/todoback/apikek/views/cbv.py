@@ -1,5 +1,4 @@
 from django.http import Http404
-
 from ..models import Task, TaskList
 from ..serializers import TaskListSerializer2, TasksSerializer
 from rest_framework.views import APIView
