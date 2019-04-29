@@ -12,15 +12,13 @@ export class MainComponent implements OnInit {
 
   public tasklist: ITaskList[]=[];
   public loading = false;
-  
+  public logged = false;
   public tasks: ITask[]=[]; 
-
   public name: any='';
- public logged = false;
-  
-
   public login:any='';
   public password:any='';
+  public showtasks=false;
+  public backclicked=true;
 
 
   constructor(private provider: ProviderService) { }
@@ -30,11 +28,12 @@ export class MainComponent implements OnInit {
     if(token){
       this.logged=true;
     }
-    if(this.logged){
+    if(this.logged ){
       this.provider.getTaskList().then(res =>{
         this.tasklist = res;
         setTimeout( () => {
           this.loading=true;
+          this.backclicked=true;
         }, 2000);
       });
     }
@@ -44,6 +43,8 @@ export class MainComponent implements OnInit {
     //this.selected=selected;
     this.provider.getTasks(task.id).then(res =>{
       this.tasks = res;
+      this.showtasks=true;
+      this.backclicked=false;
     });
 
   }
@@ -84,6 +85,7 @@ export class MainComponent implements OnInit {
           this.tasklist = r;
           setTimeout(() => {
             this.loading = true;
+            this.backclicked=true;
           }, 2000);
         });
 
@@ -97,4 +99,15 @@ export class MainComponent implements OnInit {
     });
   }
 
+  back() {
+    this.provider.getTaskList().then(res =>{
+      this.tasklist = res;
+      setTimeout( () => {
+        this.loading=true;
+        console.log("back");
+        this.backclicked=true;
+        this.showtasks=false;
+      }, 2000);
+    });
+  }
 }

@@ -1,0 +1,53 @@
+.static{
+    position: relative;
+    padding-top:30px;
+    padding-left:  570px;
+}
+#field{
+    height:  20px;
+    width:300px;
+border-radius: 10px;
+}
+#btns{
+    background: rgb(54, 48, 143,0.8);
+    color:white;
+    border-radius: 7px;
+    height: 20px;
+    padding-left: 5px;
+    margin-left:25px;
+    margin-top:20px;
+}
+#fortasklists{
+    width:300px;
+    border-radius: 5px;
+    height:20px;
+    color:rgb(54, 48, 143,0.8);
+}
+.tasklists{
+    padding-left:470px;
+}
+#events{
+    margin-left:10px;
+}
+.tasks{
+    padding-left:470px;
+}
+.logging{
+    padding-left:650px;
+    padding-top:250px;
+}
+#btnoflog{
+    border-radius: 5px;
+    width:200px;
+    height: 20px;
+    margin-top:5px;
+    color: rgb(54, 48, 143,0.8);
+}
+#authbtn{
+    background-color: rgb(54, 48, 143,0.8);
+    color:white;
+    height: 25px;
+    margin-top:5px;
+    border-radius: 5px;
+    margin-left:70px;
+}
